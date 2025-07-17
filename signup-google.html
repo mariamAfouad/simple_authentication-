@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Sign In Mock</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .google-card {
+      background-color: white;
+      width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      padding: 30px 35px;
+    }
+
+    .google-logo {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #5f6368;
+    }
+
+    .google-logo img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #1a73e8;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .link {
+      font-size: 13px;
+      color: #1a73e8;
+      text-decoration: none;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .info {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .info a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btns .left-link {
+      font-size: 14px;
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .btns button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btns button:hover {
+      background-color: #1967d2;
+    }
+  </style>
+</head>
+<body>
+  <div class="google-card">
+    <div class="google-logo">
+      <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" />
+      Sign in with Google
+    </div>
+
+    <h2>Sign in</h2>
+    <div class="subtitle">Continue to your-app.com</div>
+
+    <input type="email" placeholder="Email or phone" />
+
+    <a class="link" href="#">Forgot email?</a>
+
+    <div class="info">
+      To continue, Google will share your name, email address, language preference and profile picture with your-app.com. Before using this app, you can review your-app.com's
+      <a href="#">privacy policy</a> and
+      <a href="#">terms of service</a>.
+    </div>
+
+    <div class="btns">
+      <a class="left-link" href="#">Create account</a>
+      <button>Next</button>
+    </div>
+  </div>
+</body>
+</html>

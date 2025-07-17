@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Roboto Condensed', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Main wrapper fills full screen */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+}
+
+/* Navbar styles */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #6c85ff;
+  flex-shrink: 0;
+}
+
+/* Logo */
+.nav-logo p {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Nav menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Active link */
+.link.active {
+  border-bottom: 2px solid white;
+}
+
+/* Buttons */
+.nav-button {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #c4d2ff;
+  transition: 0.3s;
+}
+
+.white-btn {
+  background-color: white;
+  color: #333;
+}
+
+.btn:hover {
+  background-color: #aebfff;
+}
+.white-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hamburger icon - hidden by default */
+.nav-menu-btn {
+  display: none;
+}
+
+/* Center logo in remaining screen height */
+.fullscreen-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.logo {
+  max-width: 300px;
+  height: auto;
+}
