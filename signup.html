@@ -10,14 +10,14 @@
   <div class="page-wrapper">
     <div class="center-box">
       <p class="form-title">SIGN UP</p>
-      <form class="signupForm">
-        <input type="text" placeholder="Full Name" required /><br><br>
-        <input type="email" placeholder="Email" required /><br><br>
-        <input type="password" placeholder="Password" required /><br><br>
-        <input type="password" placeholder="Confirm Password" required /><br><br>
+      <form class="signupForm" novalidate>
+        <input type="text" id="fullName" placeholder="Full Name" required /><br><br>
+        <input type="email" id="email" placeholder="Email" required /><br><br>
+        <input type="password" id="password" placeholder="Password" required /><br><br>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required /><br><br>
 
         <button type="submit" class="login-btn">CREATE ACCOUNT</button>
-
+        
         <div class="forgot-password">
           <a href="login.html">Already have an account? Log In</a>
         </div>
@@ -30,5 +30,5 @@
         </a>
 
     </div>
-
+<script src="signup.js"></script>
     

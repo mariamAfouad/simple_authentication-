@@ -6,16 +6,18 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>login</title>
             <link rel="stylesheet" href="login.css">
-            <!-- <script src="index.js"></script> -->
+            
              
         </head>
         <body>
   <div class="page-wrapper">
     <div class="center-box">
       <p class="form-title">LOGIN</p>
-      <form class="loginForm">
-        <input type="email" placeholder="email" required /><br><br>
-        <input type="password" placeholder="Password" required /><br><br>
+      <form class="loginForm" novalidate>  <!--no browser’s default validation-->
+        <input type="email" id="email" placeholder="email"  /><br><br>
+        <input type="password" id="password" placeholder="Password"  /><br><br> 
+        <!-- input password by default provide the“Toggle the password visibility” just means:
+        “Click to show or hide what you typed in the password box.” -->
 
         <div class="remember-me">
           <input type="checkbox" id="remember" />
@@ -23,6 +25,7 @@
         </div>
 
         <button type="submit" class="login-btn">LOGIN</button>
+        <p id="errorMessage" style="color: red;" ></p>
 
         <div class="forgot-password">
           <a href="#">Forgot Password?</a>
@@ -40,6 +43,7 @@
       </div>
     </div>
   </div>
+  <script src="login.js"></script>
 </body>
 
     </html>

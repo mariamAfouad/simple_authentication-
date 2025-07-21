@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UltatelTask</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="index.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
@@ -31,9 +30,57 @@
       </div>
     </nav>
 
-      <div class="fullscreen-container">
-                <img src="OIP.webp" alt="ULTATEL Logo" class="logo">
-      </div>
+    <div class="fullscreen-container">
+      <img src="OIP.webp" alt="ULTATEL Logo" class="logo">
+    </div>
+
+    <div class="main-dashboard">
+      <p>Total Users: <span id="userCount">0</span></p>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search users..." />
+      <ul id="userList" style="display: none;"></ul>
+
+      <button id="toggleDark" class="btn">🌙 Toggle Dark Mode</button>
+      <button class="btn" onclick="showToast('hello there!')">Show Toast</button>
+    </div>
   </div>
 
-  
+  <script src="index.js"></script>
+  <script src="auth.js"></script>
+  <script src="ui.js"></script>
+  <script src="utils.js"></script>
+
+  <script>
+    // Initialize features
+    setupDarkModeToggle("toggleDark");
+    greetUser("Mariam");
+    enableAutoLogout(5); // 5 minutes
+
+    // Update total users
+    document.getElementById("userCount").textContent = getUserCount();
+
+    // Search logic with conditional display
+    const input = document.getElementById("searchInput");
+    const ul = document.getElementById("userList");
+    ul.style.display = "none"; // Hide list on load
+
+    input.addEventListener("input", function () {
+      const query = this.value.trim().toLowerCase();
+      ul.innerHTML = "";
+
+      if (query === "") {
+        ul.style.display = "none";
+        return;
+      }
+
+      const results = searchUsers(query);
+      results.forEach(user => {
+        const li = document.createElement("li");
+        li.textContent = `${user.fullName} (${user.email})`;
+        ul.appendChild(li);
+      });
+
+      ul.style.display = results.length > 0 ? "block" : "none";
+    });
+  </script>
+</body>
+</html>

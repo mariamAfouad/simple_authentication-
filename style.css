@@ -106,3 +106,88 @@ html, body {
   max-width: 300px;
   height: auto;
 }
+
+/* ===============================
+   🔥 Extra Styles for JS Features
+   =============================== */
+
+/* Dark Mode */
+body.dark {
+  background-color: #111;
+  color: white;
+}
+body.dark .nav {
+  background-color: #222;
+}
+body.dark .nav-menu ul li a,
+body.dark .nav-logo p {
+  color: white;
+}
+body.dark .btn {
+  background-color: #555;
+  color: white;
+  
+}
+body.dark .white-btn {
+  background-color: #999;
+  color: black;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 9999;
+}
+.toast.show {
+  opacity: 1;
+}
+
+/* Dashboard-style panel (user count, search bar, etc.) */
+.main-dashboard {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 0;
+  background-color: white;
+}
+body.dark .main-dashboard {
+  background-color: #1a1a1a;
+}
+
+
+.user-count {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+}
+body.dark .user-count {
+  color: #ddd;
+}
+
+.search-input {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+body.dark .search-input {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
+
+body.dark .search-box input {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
